@@ -8,3 +8,5 @@ pool:
 
 steps:
 - script: echo $(System.PullRequest.PullRequestNumber)
+
+- script: echo "hello"
