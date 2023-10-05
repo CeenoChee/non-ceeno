@@ -24,6 +24,6 @@ jobs:
   displayName: check_second_commit
   steps:
   - script: echo $(Build.SourceVersion)
-  - script: echo pr2-build2
+
 
 
