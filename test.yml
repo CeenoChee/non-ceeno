@@ -17,13 +17,13 @@ jobs:
   displayName: check_first_commit
   steps:
   - script: echo $(Build.SourceVersion)
-
+  - script: echo pr1-build1
 
 
 - job: second_commit
   displayName: check_second_commit
   steps:
   - script: echo $(Build.SourceVersion)
-  - script: echo pr2-build2
+
 
 
