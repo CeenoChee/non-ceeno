@@ -1,12 +1,27 @@
-trigger: none
-
-pr: 
+trigger: 
 - main
 
+pr:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - test.yml
+
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
-steps:
-- script: echo $(System.PullRequest.PullRequestNumber)
+jobs:
+- job: first_commit
+  displayName: check_first_commit
+  steps:
+  - script: echo $(Build.SourceVersion)
 
-- script: echo "hello-off setting on comment with limit on"
+
+
+- job: second_commit
+  displayName: check_second_commit
+  steps:
+  - script: echo $(Build.SourceVersion)
+
